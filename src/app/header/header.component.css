@@ -1,0 +1,22 @@
+.header {
+    background-color: #08352b;
+    color: #fff;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    padding: 20px;
+}
+
+h2{
+
+}
+.site-image img {
+    max-width: 50%;
+    height: auto;
+}
+
+.site-slogan h2 {
+    margin: 0;
+    font-size: 35px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

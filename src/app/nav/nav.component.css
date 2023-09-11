@@ -1,0 +1,30 @@
+.navbar {
+    background-color: #0b744b;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.site-name h2 {
+    margin: 0;
+    font-size: 50px;
+}
+
+.site-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.site-menu a {
+    text-decoration: none;
+    color: #fff;
+    margin-right: 20px;
+    font-size: 30px;
+}
+
+.site-menu a:hover {
+    text-decoration: underline;
+}
