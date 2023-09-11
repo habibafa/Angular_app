@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'first_app';
+  message="The Angular CLI installs the necessary Angular npm packages and other dependencies. This can take a few minutes."
 }
