@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -7,4 +7,9 @@ import { Component, Input } from '@angular/core';
 })
 export class ChildComponent {
 @Input() numToPass:number = 0;
+@Output() customEvent = new EventEmitter<string>();
+
+sendEvent(){
+  this.customEvent.emit('custom event data from child')
+}
 }

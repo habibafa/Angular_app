@@ -1,5 +1,8 @@
 <div>
-    <p>parent works!</p>
-    <p>parent works! The value here {{numToPass}}</p>
-<app-child [numToPass] = "numToPass"/>
+  <p>parent works!</p>
+  <p>parent works! The value here {{ numToPass }}</p>
+  <app-child [numToPass]="numToPass" />
+
+  <app-child (customEvent)="handleCustomEvent($event)"></app-child>
+  <p>{{ receivedData }}</p>
 </div>

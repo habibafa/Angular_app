@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class ParentComponent {
 numToPass : number = 5;
+receivedData: string = '';
+
+  handleCustomEvent(data: string) {
+    this.receivedData = data;
+    console.log(this.receivedData)
+  }
 }
