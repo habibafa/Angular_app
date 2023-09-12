@@ -14,12 +14,16 @@
 .product {
     border: 1px solid #ccc;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
     text-align: center;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     /* width: 250px; */
     transition: transform 0.2s ease-in-out;
+    justify-content: center;
+    align-items:center
 }
 
 .product:hover {
@@ -46,8 +50,41 @@
     max-width: 100%;
     height: auto;
     border-radius: 5px;
+    margin-bottom: 5px;
+    /* align-items:center */
 }
 
 body {
     margin-top: 20px;
 }
+/* "Buy Now" Button */
+.buy-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    margin: 5px;
+
+  }
+  
+  .buy-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* "Details" Button */
+  .details-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 5px;
+  
+}
+  
+  .details-button:hover {
+    background-color: #1e7e34;
+  }
+  

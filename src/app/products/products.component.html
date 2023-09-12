@@ -28,5 +28,15 @@
     </div>
 
     <img [src]="p.image" alt="{{ p.name }}" width="50%" />
+
+    <button class="buy-button" *ngIf="p.available === 'available'; else notifyme">
+      Buy Now
+    </button>
+    <ng-template #notifyme>
+      <button class="buy-button">Notify me</button>
+    </ng-template>
+
+    <!-- "Details" Button -->
+    <button class="details-button">Details</button>
   </div>
 </div>

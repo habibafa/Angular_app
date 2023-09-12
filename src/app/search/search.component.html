@@ -1,13 +1,13 @@
-<div class="search-div">
-    <span>Search</span>
+<div class="search-div" [ngClass]="{ changeBackground: searchValue != '' }">
+  <span>Search</span>
 
-    <!-- original first video -->
-    <!-- <input type="text" (input)="changeSearchValue($event)"> -->
+  <!-- original first video -->
+  <!-- <input type="text" (input)="changeSearchValue($event)"> -->
 
-    <!-- video approach below (this is 2 way data binding )-->
-    <input type="text" [(ngModel)]="searchValue">
+  <!-- video approach below (this is 2 way data binding )-->
+  <input type="text" [(ngModel)]="searchValue" />
 
-    <!-- my approach below, shows like placeholder, above is proper text-->
-    <!-- <input type="text" (input)="changeSearchValue($event)" placeholder="{{searchValue}}"> -->
-    <span>You searched for "{{searchValue}}"</span>
+  <!-- my approach below, shows like placeholder, above is proper text-->
+  <!-- <input type="text" (input)="changeSearchValue($event)" placeholder="{{searchValue}}"> -->
+  <span *ngIf="searchValue != ''">Searching for "{{ searchValue }}"</span>
 </div>
