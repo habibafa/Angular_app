@@ -9,6 +9,8 @@ import { NotificationComponent } from './notification/notification.component';
 import { SearchComponent } from './search/search.component';
 import { FormsModule } from '@angular/forms';
 import { ProductsComponent } from './products/products.component';
+import { ChildComponent } from './child/child.component';
+import { ParentComponent } from './parent/parent.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { ProductsComponent } from './products/products.component';
     NotificationComponent,
     SearchComponent,
     ProductsComponent,
+    ChildComponent,
+    ParentComponent,
   ],
   imports: [
     BrowserModule,
