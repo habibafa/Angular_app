@@ -1,0 +1,32 @@
+<!-- <div *ngFor="let item of [1, 3, 5]">
+  <p>Number is : {{ item }}</p>
+</div> -->
+
+<div *ngFor="let p of products; let i = index" class="product-container">
+  <div
+    class="product"
+    [ngStyle]="{
+      backgroundColor: p.available === 'available' ? 'lightgreen' : 'lightgrey'
+    }"
+  >
+    <p class="product-name">Product No. {{ i + 1 }}</p>
+    <p class="product-name">{{ p.name }}</p>
+    <p [style.color]="p.color">Color: {{ p.color }}</p>
+    <!-- my approach below -->
+    <!-- <p
+      class="availability"
+      [style.color]="p.available === 'available' ? 'green' : 'red'"
+    >
+      Available: {{ p.available }}
+    </p> -->
+    <!-- video ngStyle approach -->
+    <div
+      class="availability"
+      [ngStyle]="{ color: p.available === 'available' ? 'green' : 'red' }"
+    >
+      {{ p.available }}
+    </div>
+
+    <img [src]="p.image" alt="{{ p.name }}" width="50%" />
+  </div>
+</div>
