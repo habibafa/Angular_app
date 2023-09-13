@@ -2,41 +2,51 @@
   <p>Number is : {{ item }}</p>
 </div> -->
 
-<div *ngFor="let p of products; let i = index" class="product-container">
+<app-search (searchTextChange)="onSearchTextEntered($event)" />
+<ng-container *ngFor="let p of products; let i = index">
   <div
-    class="product"
-    [ngStyle]="{
-      backgroundColor: p.available === 'available' ? 'lightgreen' : 'lightgrey'
-    }"
+    class="product-container"
+    *ngIf="searchText === '' || p.name.toLowerCase().includes(searchText)"
   >
-    <p class="product-name">Product No. {{ i + 1 }}</p>
-    <p class="product-name">{{ p.name }}</p>
-    <p [style.color]="p.color">Color: {{ p.color }}</p>
-    <!-- my approach below -->
-    <!-- <p
-      class="availability"
-      [style.color]="p.available === 'available' ? 'green' : 'red'"
-    >
-      Available: {{ p.available }}
-    </p> -->
-    <!-- video ngStyle approach -->
     <div
-      class="availability"
-      [ngStyle]="{ color: p.available === 'available' ? 'green' : 'red' }"
+      class="product"
+      [ngStyle]="{
+        backgroundColor:
+          p.available === 'available' ? 'lightgreen' : 'lightgrey'
+      }"
     >
-      {{ p.available }}
+      <p class="product-name">Product No. {{ i + 1 }}</p>
+      <p class="product-name">{{ p.name }}</p>
+      <p [style.color]="p.color">Color: {{ p.color }}</p>
+      <!-- my approach below -->
+      <!-- <p
+        class="availability"
+        [style.color]="p.available === 'available' ? 'green' : 'red'"
+      >
+        Available: {{ p.available }}
+      </p> -->
+      <!-- video ngStyle approach -->
+      <div
+        class="availability"
+        [ngStyle]="{ color: p.available === 'available' ? 'green' : 'red' }"
+      >
+        {{ p.available }}
+      </div>
+
+      <img [src]="p.image" alt="{{ p.name }}" width="50%" />
+
+      <button
+        class="buy-button"
+        *ngIf="p.available === 'available'; else notifyme"
+      >
+        Buy Now
+      </button>
+      <ng-template #notifyme>
+        <button class="buy-button">Notify me</button>
+      </ng-template>
+
+      <!-- "Details" Button -->
+      <button class="details-button">Details</button>
     </div>
-
-    <img [src]="p.image" alt="{{ p.name }}" width="50%" />
-
-    <button class="buy-button" *ngIf="p.available === 'available'; else notifyme">
-      Buy Now
-    </button>
-    <ng-template #notifyme>
-      <button class="buy-button">Notify me</button>
-    </ng-template>
-
-    <!-- "Details" Button -->
-    <button class="details-button">Details</button>
   </div>
-</div>
+</ng-container>

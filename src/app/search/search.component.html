@@ -5,7 +5,7 @@
   <!-- <input type="text" (input)="changeSearchValue($event)"> -->
 
   <!-- video approach below (this is 2 way data binding )-->
-  <input type="text" [(ngModel)]="searchValue" />
+  <input type="text" [(ngModel)]="searchValue" (input)="onSearchTextChange()"/>
 
   <!-- my approach below, shows like placeholder, above is proper text-->
   <!-- <input type="text" (input)="changeSearchValue($event)" placeholder="{{searchValue}}"> -->
