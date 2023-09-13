@@ -13,7 +13,9 @@ import { ChildComponent } from './child/child.component';
 import { ParentComponent } from './parent/parent.component';
 import { DemoComponent } from './demo/demo.component';
 import { ProductsService } from './products/products.service';
-
+import { RouterModule } from '@angular/router';
+import { Routes } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +31,9 @@ import { ProductsService } from './products/products.service';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    // RouterModule,
+    AppRoutingModule
 
   ],
   providers: [ProductsService],
