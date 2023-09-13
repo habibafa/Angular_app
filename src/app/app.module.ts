@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { ProductsComponent } from './products/products.component';
 import { ChildComponent } from './child/child.component';
 import { ParentComponent } from './parent/parent.component';
+import { DemoComponent } from './demo/demo.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { ParentComponent } from './parent/parent.component';
     ProductsComponent,
     ChildComponent,
     ParentComponent,
+    DemoComponent,
   ],
   imports: [
     BrowserModule,
