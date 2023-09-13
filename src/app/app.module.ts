@@ -12,6 +12,7 @@ import { ProductsComponent } from './products/products.component';
 import { ChildComponent } from './child/child.component';
 import { ParentComponent } from './parent/parent.component';
 import { DemoComponent } from './demo/demo.component';
+import { ProductsService } from './products/products.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { DemoComponent } from './demo/demo.component';
     FormsModule
 
   ],
-  providers: [],
+  providers: [ProductsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
