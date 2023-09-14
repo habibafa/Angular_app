@@ -16,6 +16,8 @@ import { ProductsService } from './products/products.service';
 import { RouterModule } from '@angular/router';
 import { Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +35,8 @@ import { AppRoutingModule } from './app-routing.module';
     BrowserModule,
     FormsModule,
     // RouterModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
 
   ],
   providers: [ProductsService],

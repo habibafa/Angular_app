@@ -18,9 +18,16 @@ export class ProductsComponent implements OnInit {
     console.log("onSearchTextEntered", this.searchText);
   }
 
-  ngOnInit() {
-    this.products = this._productService.getProducts();
-  }
+  // ngOnInit() {
+  //   // this.products = this._productService.getProducts();
+  //   this.products = this._productService.onProductsFetch();
+  //   console.log('products are ', this.products)
+  // }
 
+  ngOnInit() {
+    this._productService.getAllProducts().subscribe((products) => {
+      this.products = products;
+      console.log('products are ', this.products);
+    });}
 
 }
