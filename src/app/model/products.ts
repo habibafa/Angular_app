@@ -1,7 +1,7 @@
 export class Products {
-    phone: string;
-    desc: string;
-    price: string;
     id: string;
+    name: string;
+    colour: string;
+    price: string;
     image: '../../assets/product.jpg'
 }
