@@ -7,7 +7,7 @@ import { Products } from "../model/products";
 @Injectable()
 export class ProductsService implements OnInit {
     url = 'http://localhost:3000/products';
-    allProducts: Products[] =[]
+    allProducts: Products[] = []
 
     ngOnInit() {
         this.getAllData()
@@ -18,6 +18,9 @@ export class ProductsService implements OnInit {
     constructor(private http: HttpClient) { }
 
     getAllProducts(): Observable<Products[]> {
+        // This method promises to get the products and returns a special kind of promise called an "observable."
+        // It doesn't fetch data immediately; it's like making a plan to get the data in the future.
+
         return this.http.get<{ [key: string]: Products }>(this.url).pipe(map((res) => {
             const products = [];
             for (const key in res) {
@@ -32,7 +35,7 @@ export class ProductsService implements OnInit {
     onProductsCreate(products: { pName: string, desc: string, price: string }) {
         console.log('in product service', products)
         const headers = new HttpHeaders({ 'myHeader': 'procademy' });
-        this.http.post<{name:string}>(this.url, products, { headers: headers }).subscribe((res) => {
+        this.http.post<{ name: string }>(this.url, products, { headers: headers }).subscribe((res) => {
             console.log('check', res)
 
         })

@@ -17,6 +17,7 @@ import { RouterModule } from '@angular/router';
 import { Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { ProductFormComponent } from './product-form/product-form.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { HttpClientModule } from '@angular/common/http';
     ChildComponent,
     ParentComponent,
     DemoComponent,
+    ProductFormComponent,
   ],
   imports: [
     BrowserModule,

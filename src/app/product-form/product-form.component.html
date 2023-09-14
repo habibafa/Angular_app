@@ -1,0 +1,19 @@
+<form #productsForm="ngForm" (ngSubmit)="onProductsCreate(productsForm.value)">
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input type="text" id="phone" name="name" ngModel />
+  </div>
+  <div class="form-group">
+    <label for="colour">Description:</label>
+    <textarea id="desc" name="colour" ngModel></textarea>
+  </div>
+  <div class="form-group">
+    <label for="available">available:</label>
+    <input type="text" id="available" name="available" ngModel />
+  </div>
+  <div class="form-group">
+    <label for="price">Price:</label>
+    <input type="number" id="price" name="price" ngModel />
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
